@@ -461,6 +461,8 @@ def _descargar_cafam(clave: str, carpeta: Path, sesion=None) -> dict:
         _, _, estado = pedir(ruta, 1)
         bordes = sorted({x for k, v in estado.items() if k.endswith(".range") and isinstance(v, dict)
                          for x in (v["from"], v["to"])})
+        if len(bordes) < 2:            # si el sitio no muestra la faceta de precio
+            bordes = [0, PRECIO_MAXIMO]
         bordes[0], bordes[-1] = 0, bordes[-1] * 2   # holgura por si un precio cambia en la corrida
         rangos = [r for a, b in zip(bordes, bordes[1:]) for r in partir(ruta, a, b)]
         if sum(t for _, t in rangos) < cantidad:
