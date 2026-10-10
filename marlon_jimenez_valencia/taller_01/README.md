@@ -25,6 +25,7 @@ taller_01/
 │   └── .../pagina_0001.json.gz, manifest.json y arbol_categorias.json.gz
 │       (en Cafam, subcategorias.json.gz)
 ├── requirements.txt             dependencias con versiones fijas
+├── prueba_colab.ipynb           prueba en Google Colab (sin conexión y en línea)
 └── README.md
 ```
 
@@ -226,6 +227,15 @@ conexión reconstruyó una base idéntica a la entregada (mismas observaciones, 
 excluidos) y el documento se renderizó sin errores.
 
 ## Prueba en un entorno distinto (Google Colab)
+
+El cuaderno `prueba_colab.ipynb` hace la prueba completa: clona el repositorio, instala
+`requirements.txt`, reconstruye la base sin conexión y la compara con la entregada, y corre
+el scraper en línea con un comercio. Se abre directamente en Colab con este enlace y se
+ejecuta con *Entorno de ejecución → Ejecutar todo*:
+
+<https://colab.research.google.com/github/marlonjimenezv/marlon_jimenez_valencia/blob/main/marlon_jimenez_valencia/taller_01/prueba_colab.ipynb>
+
+Los mismos pasos, a mano:
 
 ```python
 !git clone https://github.com/marlonjimenezv/marlon_jimenez_valencia.git
