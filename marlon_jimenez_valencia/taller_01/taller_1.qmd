@@ -300,8 +300,10 @@ solo con `requirements.txt` (Python 3.13.2, en el mismo computador). Desde ahí,
 idéntica a la entregada: mismas observaciones y precios, mismos anuncios y mismos excluidos.
 El documento también se renderizó sin errores desde ese entorno.
 
-**[PENDIENTE: correr la prueba en Google Colab con las instrucciones del `README.md` y anotar
-aquí el resultado.]**
+Para probarlo en un computador distinto se incluye el cuaderno `prueba_colab.ipynb`, que se
+abre en Google Colab desde el enlace del `README.md`. Clona el repositorio, instala
+`requirements.txt`, reconstruye la base sin conexión, la compara con la entregada y corre el
+scraper en línea con un comercio.
 
 # Preparación de los datos
 
